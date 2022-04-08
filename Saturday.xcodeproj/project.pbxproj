@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F725FD6227F0D48100F1BD8A /* Saturday WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F725FD6127F0D48100F1BD8A /* Saturday WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F725FD6827F0D48100F1BD8A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F725FD6627F0D48100F1BD8A /* Interface.storyboard */; };
+		F725FD6A27F0D48200F1BD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F725FD6927F0D48200F1BD8A /* Assets.xcassets */; };
+		F725FD7027F0D48200F1BD8A /* Saturday WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F725FD6F27F0D48200F1BD8A /* Saturday WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F725FD7527F0D48200F1BD8A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725FD7427F0D48200F1BD8A /* InterfaceController.swift */; };
+		F725FD7727F0D48200F1BD8A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725FD7627F0D48200F1BD8A /* ExtensionDelegate.swift */; };
+		F725FD7927F0D48200F1BD8A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725FD7827F0D48200F1BD8A /* NotificationController.swift */; };
+		F725FD7B27F0D48200F1BD8A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725FD7A27F0D48200F1BD8A /* ComplicationController.swift */; };
+		F725FD7D27F0D48300F1BD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F725FD7C27F0D48300F1BD8A /* Assets.xcassets */; };
+		F725FD8E27F0D64200F1BD8A /* ShortcutsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725FD8D27F0D64200F1BD8A /* ShortcutsRowController.swift */; };
+		F725FD9127F0D94900F1BD8A /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725FD9027F0D94900F1BD8A /* SocketManager.swift */; };
+		F725FD9427F0DFDF00F1BD8A /* SocketError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725FD9327F0DFDF00F1BD8A /* SocketError.swift */; };
+		F725FD9727F1928200F1BD8A /* ShortcutsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725FD9627F1928200F1BD8A /* ShortcutsResponse.swift */; };
+		F73B57B127F793AD001B286C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73B57B027F793AD001B286C /* NetworkManager.swift */; };
+		F73EE3DF27F63E0E0066E7C5 /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73EE3DE27F63E0E0066E7C5 /* MediaController.swift */; };
+		F7B1A60627FF1A13006FC9E1 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1A60527FF1A13006FC9E1 /* ServerResponse.swift */; };
+		F7E793AC27F2326B00C57539 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E793AB27F2326B00C57539 /* SystemInfo.swift */; };
+		F7E793AE27F2363300C57539 /* MainRowContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E793AD27F2363300C57539 /* MainRowContoller.swift */; };
+		F7E793B127F23B5B00C57539 /* SoundLevelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E793B027F23B5B00C57539 /* SoundLevelController.swift */; };
+		F7E793BA27F3896600C57539 /* ShortcutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E793B927F3896600C57539 /* ShortcutsController.swift */; };
+		F7E793BC27F3922E00C57539 /* BrightnessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E793BB27F3922E00C57539 /* BrightnessController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F725FD6327F0D48100F1BD8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F725FD5727F0D48100F1BD8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F725FD6027F0D48100F1BD8A;
+			remoteInfo = "Saturday WatchKit App";
+		};
+		F725FD7127F0D48200F1BD8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F725FD5727F0D48100F1BD8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F725FD6E27F0D48200F1BD8A;
+			remoteInfo = "Saturday WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F725FD8527F0D48300F1BD8A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F725FD7027F0D48200F1BD8A /* Saturday WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F725FD8927F0D48300F1BD8A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F725FD6227F0D48100F1BD8A /* Saturday WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F725FD5D27F0D48100F1BD8A /* Saturday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saturday.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F725FD6127F0D48100F1BD8A /* Saturday WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saturday WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F725FD6727F0D48100F1BD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F725FD6927F0D48200F1BD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F725FD6F27F0D48200F1BD8A /* Saturday WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Saturday WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F725FD7427F0D48200F1BD8A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F725FD7627F0D48200F1BD8A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F725FD7827F0D48200F1BD8A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F725FD7A27F0D48200F1BD8A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F725FD7C27F0D48300F1BD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F725FD7E27F0D48300F1BD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F725FD7F27F0D48300F1BD8A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F725FD8D27F0D64200F1BD8A /* ShortcutsRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsRowController.swift; sourceTree = "<group>"; };
+		F725FD9027F0D94900F1BD8A /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		F725FD9327F0DFDF00F1BD8A /* SocketError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketError.swift; sourceTree = "<group>"; };
+		F725FD9627F1928200F1BD8A /* ShortcutsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsResponse.swift; sourceTree = "<group>"; };
+		F73B57B027F793AD001B286C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F73EE3DE27F63E0E0066E7C5 /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
+		F7B1A60527FF1A13006FC9E1 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		F7E793AB27F2326B00C57539 /* SystemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
+		F7E793AD27F2363300C57539 /* MainRowContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRowContoller.swift; sourceTree = "<group>"; };
+		F7E793B027F23B5B00C57539 /* SoundLevelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundLevelController.swift; sourceTree = "<group>"; };
+		F7E793B927F3896600C57539 /* ShortcutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsController.swift; sourceTree = "<group>"; };
+		F7E793BB27F3922E00C57539 /* BrightnessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F725FD6C27F0D48200F1BD8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F725FD5627F0D48100F1BD8A = {
+			isa = PBXGroup;
+			children = (
+				F725FD6527F0D48100F1BD8A /* Saturday WatchKit App */,
+				F725FD7327F0D48200F1BD8A /* Saturday WatchKit Extension */,
+				F725FD5E27F0D48100F1BD8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F725FD5E27F0D48100F1BD8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F725FD5D27F0D48100F1BD8A /* Saturday.app */,
+				F725FD6127F0D48100F1BD8A /* Saturday WatchKit App.app */,
+				F725FD6F27F0D48200F1BD8A /* Saturday WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F725FD6527F0D48100F1BD8A /* Saturday WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				F725FD6627F0D48100F1BD8A /* Interface.storyboard */,
+				F725FD6927F0D48200F1BD8A /* Assets.xcassets */,
+			);
+			path = "Saturday WatchKit App";
+			sourceTree = "<group>";
+		};
+		F725FD7327F0D48200F1BD8A /* Saturday WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F725FD9827F1928700F1BD8A /* Models */,
+				F725FD9227F0D94D00F1BD8A /* Services */,
+				F725FD8F27F0D64500F1BD8A /* Views */,
+				F7E793AF27F23B3800C57539 /* Controllers */,
+				F725FD7627F0D48200F1BD8A /* ExtensionDelegate.swift */,
+				F725FD7C27F0D48300F1BD8A /* Assets.xcassets */,
+				F725FD7E27F0D48300F1BD8A /* Info.plist */,
+				F725FD7F27F0D48300F1BD8A /* PushNotificationPayload.apns */,
+				F725FD9527F0DFE300F1BD8A /* Uttils */,
+			);
+			path = "Saturday WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F725FD8F27F0D64500F1BD8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7E793AD27F2363300C57539 /* MainRowContoller.swift */,
+				F725FD8D27F0D64200F1BD8A /* ShortcutsRowController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F725FD9227F0D94D00F1BD8A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F725FD9027F0D94900F1BD8A /* SocketManager.swift */,
+				F73B57B027F793AD001B286C /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F725FD9527F0DFE300F1BD8A /* Uttils */ = {
+			isa = PBXGroup;
+			children = (
+				F725FD9327F0DFDF00F1BD8A /* SocketError.swift */,
+			);
+			path = Uttils;
+			sourceTree = "<group>";
+		};
+		F725FD9827F1928700F1BD8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F725FD9627F1928200F1BD8A /* ShortcutsResponse.swift */,
+				F7E793AB27F2326B00C57539 /* SystemInfo.swift */,
+				F7B1A60527FF1A13006FC9E1 /* ServerResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F7E793AF27F23B3800C57539 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F725FD7427F0D48200F1BD8A /* InterfaceController.swift */,
+				F725FD7827F0D48200F1BD8A /* NotificationController.swift */,
+				F725FD7A27F0D48200F1BD8A /* ComplicationController.swift */,
+				F7E793B027F23B5B00C57539 /* SoundLevelController.swift */,
+				F7E793B927F3896600C57539 /* ShortcutsController.swift */,
+				F7E793BB27F3922E00C57539 /* BrightnessController.swift */,
+				F73EE3DE27F63E0E0066E7C5 /* MediaController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F725FD5C27F0D48100F1BD8A /* Saturday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F725FD8A27F0D48300F1BD8A /* Build configuration list for PBXNativeTarget "Saturday" */;
+			buildPhases = (
+				F725FD5B27F0D48100F1BD8A /* Resources */,
+				F725FD8927F0D48300F1BD8A /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F725FD6427F0D48100F1BD8A /* PBXTargetDependency */,
+			);
+			name = Saturday;
+			productName = Saturday;
+			productReference = F725FD5D27F0D48100F1BD8A /* Saturday.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		F725FD6027F0D48100F1BD8A /* Saturday WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F725FD8627F0D48300F1BD8A /* Build configuration list for PBXNativeTarget "Saturday WatchKit App" */;
+			buildPhases = (
+				F725FD5F27F0D48100F1BD8A /* Resources */,
+				F725FD8527F0D48300F1BD8A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F725FD7227F0D48200F1BD8A /* PBXTargetDependency */,
+			);
+			name = "Saturday WatchKit App";
+			productName = "Saturday WatchKit App";
+			productReference = F725FD6127F0D48100F1BD8A /* Saturday WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F725FD6E27F0D48200F1BD8A /* Saturday WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F725FD8227F0D48300F1BD8A /* Build configuration list for PBXNativeTarget "Saturday WatchKit Extension" */;
+			buildPhases = (
+				F725FD6B27F0D48200F1BD8A /* Sources */,
+				F725FD6C27F0D48200F1BD8A /* Frameworks */,
+				F725FD6D27F0D48200F1BD8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Saturday WatchKit Extension";
+			productName = "Saturday WatchKit Extension";
+			productReference = F725FD6F27F0D48200F1BD8A /* Saturday WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F725FD5727F0D48100F1BD8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					F725FD5C27F0D48100F1BD8A = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					F725FD6027F0D48100F1BD8A = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					F725FD6E27F0D48200F1BD8A = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = F725FD5A27F0D48100F1BD8A /* Build configuration list for PBXProject "Saturday" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F725FD5627F0D48100F1BD8A;
+			productRefGroup = F725FD5E27F0D48100F1BD8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F725FD5C27F0D48100F1BD8A /* Saturday */,
+				F725FD6027F0D48100F1BD8A /* Saturday WatchKit App */,
+				F725FD6E27F0D48200F1BD8A /* Saturday WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F725FD5B27F0D48100F1BD8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F725FD5F27F0D48100F1BD8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F725FD6A27F0D48200F1BD8A /* Assets.xcassets in Resources */,
+				F725FD6827F0D48100F1BD8A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F725FD6D27F0D48200F1BD8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F725FD7D27F0D48300F1BD8A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F725FD6B27F0D48200F1BD8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F725FD9727F1928200F1BD8A /* ShortcutsResponse.swift in Sources */,
+				F7E793AC27F2326B00C57539 /* SystemInfo.swift in Sources */,
+				F725FD7927F0D48200F1BD8A /* NotificationController.swift in Sources */,
+				F725FD7B27F0D48200F1BD8A /* ComplicationController.swift in Sources */,
+				F725FD7727F0D48200F1BD8A /* ExtensionDelegate.swift in Sources */,
+				F7B1A60627FF1A13006FC9E1 /* ServerResponse.swift in Sources */,
+				F725FD7527F0D48200F1BD8A /* InterfaceController.swift in Sources */,
+				F7E793AE27F2363300C57539 /* MainRowContoller.swift in Sources */,
+				F7E793BA27F3896600C57539 /* ShortcutsController.swift in Sources */,
+				F7E793B127F23B5B00C57539 /* SoundLevelController.swift in Sources */,
+				F725FD9427F0DFDF00F1BD8A /* SocketError.swift in Sources */,
+				F725FD9127F0D94900F1BD8A /* SocketManager.swift in Sources */,
+				F7E793BC27F3922E00C57539 /* BrightnessController.swift in Sources */,
+				F73B57B127F793AD001B286C /* NetworkManager.swift in Sources */,
+				F73EE3DF27F63E0E0066E7C5 /* MediaController.swift in Sources */,
+				F725FD8E27F0D64200F1BD8A /* ShortcutsRowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F725FD6427F0D48100F1BD8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F725FD6027F0D48100F1BD8A /* Saturday WatchKit App */;
+			targetProxy = F725FD6327F0D48100F1BD8A /* PBXContainerItemProxy */;
+		};
+		F725FD7227F0D48200F1BD8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F725FD6E27F0D48200F1BD8A /* Saturday WatchKit Extension */;
+			targetProxy = F725FD7127F0D48200F1BD8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F725FD6627F0D48100F1BD8A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F725FD6727F0D48100F1BD8A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F725FD8027F0D48300F1BD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F725FD8127F0D48300F1BD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F725FD8327F0D48300F1BD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8AVD2TKW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Saturday WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Saturday WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Saturday_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = Saturday_WatchKit_Extension.ExtensionDelegate;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wellone.ios.Saturday.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		F725FD8427F0D48300F1BD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8AVD2TKW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Saturday WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Saturday WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Saturday_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = Saturday_WatchKit_Extension.ExtensionDelegate;
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wellone.ios.Saturday.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		F725FD8727F0D48300F1BD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8AVD2TKW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = Saturday_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "Saturday WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wellone.ios.Saturday.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		F725FD8827F0D48300F1BD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8AVD2TKW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = Saturday_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "Saturday WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wellone.ios.Saturday.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		F725FD8B27F0D48300F1BD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8AVD2TKW;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wellone.ios.Saturday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F725FD8C27F0D48300F1BD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3S8AVD2TKW;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wellone.ios.Saturday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F725FD5A27F0D48100F1BD8A /* Build configuration list for PBXProject "Saturday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F725FD8027F0D48300F1BD8A /* Debug */,
+				F725FD8127F0D48300F1BD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F725FD8227F0D48300F1BD8A /* Build configuration list for PBXNativeTarget "Saturday WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F725FD8327F0D48300F1BD8A /* Debug */,
+				F725FD8427F0D48300F1BD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F725FD8627F0D48300F1BD8A /* Build configuration list for PBXNativeTarget "Saturday WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F725FD8727F0D48300F1BD8A /* Debug */,
+				F725FD8827F0D48300F1BD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F725FD8A27F0D48300F1BD8A /* Build configuration list for PBXNativeTarget "Saturday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F725FD8B27F0D48300F1BD8A /* Debug */,
+				F725FD8C27F0D48300F1BD8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F725FD5727F0D48100F1BD8A /* Project object */;
+}

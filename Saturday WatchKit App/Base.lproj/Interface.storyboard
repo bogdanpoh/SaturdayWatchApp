@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oud-K1-QXm">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
+    </dependencies>
+    <scenes>
+        <!--ShortcutsController-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="ShortcutsController" id="AgC-eL-Hgc" customClass="ShortcutsController" customModule="Saturday_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="rRt-L5-Jy9">
+                            <items>
+                                <tableRow identifier="ShortcutRow" id="87Z-xk-ae9" customClass="ShortcutsRowController" customModule="Saturday_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" alignment="left" id="yqo-zz-CWX">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Shortcut" id="70q-NU-ZYI"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="70q-NU-ZYI" id="kTx-NV-J6Y"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="shortcutsTable" destination="rRt-L5-Jy9" id="HbA-Qo-st3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-119" y="957"/>
+        </scene>
+        <!--MediaController-->
+        <scene sceneID="lJa-r0-khv">
+            <objects>
+                <controller identifier="MediaController" id="TwN-8z-QH6" customClass="MediaController" customModule="Saturday_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="134" alignment="center" verticalAlignment="center" id="SY2-1m-IBa">
+                            <items>
+                                <button alignment="center" title="⏪" id="6NR-8m-Qjl">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                    <connections>
+                                        <action selector="prevAction" destination="TwN-8z-QH6" id="9O0-Fv-saq"/>
+                                    </connections>
+                                </button>
+                                <button alignment="center" title="⏯" id="hZv-2J-j4Q">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                    <connections>
+                                        <action selector="playAction" destination="TwN-8z-QH6" id="43h-FW-Kln"/>
+                                    </connections>
+                                </button>
+                                <button alignment="center" title="⏩" id="6iy-ng-lwu">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                    <connections>
+                                        <action selector="nextAction" destination="TwN-8z-QH6" id="h8E-f9-X4u"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="center" id="J7G-0m-WcS">
+                            <items>
+                                <button alignment="center" title="◀️" id="i3O-95-DCb">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                    <connections>
+                                        <action selector="leftAction" destination="TwN-8z-QH6" id="h47-M7-Ijy"/>
+                                    </connections>
+                                </button>
+                                <button alignment="center" title="▶️" id="8FX-b8-TTg">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                    <connections>
+                                        <action selector="rightAction" destination="TwN-8z-QH6" id="I3g-bq-k5u"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-119" y="1282"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="TBX-1i-FTE">
+            <objects>
+                <controller id="oud-K1-QXm" customClass="InterfaceController" customModule="Saturday_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="svY-Kd-SsC">
+                            <items>
+                                <tableRow identifier="MainRow" id="brd-v9-iq1" customClass="MainRowController" customModule="Saturday_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" alignment="left" id="ITA-4J-voe">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="System info" id="bNs-lX-bsJ"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="mainLabel" destination="bNs-lX-bsJ" id="CDl-b8-Vr7"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="mainTable" destination="svY-Kd-SsC" id="Qet-Zt-rX9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-119" y="1"/>
+        </scene>
+        <!--SoundLevelController-->
+        <scene sceneID="h35-1q-0EM">
+            <objects>
+                <controller identifier="SoundLevelController" id="bj8-dU-cTH" customClass="SoundLevelController" customModule="Saturday_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="06r-wb-bRT">
+                            <items>
+                                <label width="1" height="0.69999999999999996" alignment="left" text="2" textAlignment="center" minimumScaleFactor="0.5" id="Vpj-8x-2ty">
+                                    <fontDescription key="font" type="boldSystem" pointSize="50"/>
+                                </label>
+                                <slider width="1" alignment="left" verticalAlignment="bottom" value="1" maximum="10" steps="10" id="swG-Tb-RkI">
+                                    <connections>
+                                        <action selector="changeValue:" destination="bj8-dU-cTH" id="NGo-cf-bQV"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="slider" destination="swG-Tb-RkI" id="32Q-hn-Mlu"/>
+                        <outlet property="soundLevelLabel" destination="Vpj-8x-2ty" id="xfy-Ei-Usr"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-119" y="345"/>
+        </scene>
+        <!--BrightnessController-->
+        <scene sceneID="hLr-wQ-ZZb">
+            <objects>
+                <controller identifier="BrightnessController" id="RIP-w7-ttJ" customClass="BrightnessController" customModule="Saturday_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="ZQl-rt-wkH">
+                            <items>
+                                <label width="1" height="0.69999999999999996" alignment="left" text="☀️" textAlignment="center" id="6IC-mm-tEI">
+                                    <fontDescription key="font" type="boldSystem" pointSize="50"/>
+                                </label>
+                                <switch width="1" alignment="left" verticalAlignment="bottom" value="YES" title="Brightness" numberOfLines="1" minimumScaleFactor="0.29999999999999999" id="hHH-K8-36b">
+                                    <connections>
+                                        <action selector="valueChanged:" destination="RIP-w7-ttJ" id="Tqu-Hm-XHQ"/>
+                                    </connections>
+                                </switch>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="brightnessSwitch" destination="hHH-K8-36b" id="pJU-Re-FcS"/>
+                        <outlet property="statusLabel" destination="6IC-mm-tEI" id="Szj-ya-jVp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-119" y="643"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Saturday_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Saturday_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+    </scenes>
+</document>
