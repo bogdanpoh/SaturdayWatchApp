@@ -50,7 +50,6 @@ class InterfaceController: WKInterfaceController {
     // MARK: - Private
     
     var socketManager: SocketManagerProtocol?
-//    var shortcutsResponse: ShortcutsResponse?
     var systemInfo: SystemInfo?
 
 }
