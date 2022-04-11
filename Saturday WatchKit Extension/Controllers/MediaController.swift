@@ -45,6 +45,10 @@ class MediaController: WKInterfaceController {
         sendAction(key: .left)
     }
     
+    @IBAction func spaceAction() {
+        sendAction(key: .space)
+    }
+    
     @IBAction func rightAction() {
         sendAction(key: .right)
     }
@@ -60,6 +64,7 @@ private extension MediaController {
         case play
         case next
         case left
+        case space
         case right
     }
     

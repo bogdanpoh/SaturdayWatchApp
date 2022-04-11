@@ -38,7 +38,7 @@
             <objects>
                 <controller identifier="MediaController" id="TwN-8z-QH6" customClass="MediaController" customModule="Saturday_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="134" alignment="center" verticalAlignment="center" id="SY2-1m-IBa">
+                        <group width="1" alignment="center" verticalAlignment="center" id="SY2-1m-IBa">
                             <items>
                                 <button alignment="center" title="⏪" id="6NR-8m-Qjl">
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,13 +63,20 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" verticalAlignment="center" id="J7G-0m-WcS">
+                        <group width="1" alignment="center" verticalAlignment="center" id="J7G-0m-WcS">
                             <items>
                                 <button alignment="center" title="◀️" id="i3O-95-DCb">
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" pointSize="32"/>
                                     <connections>
                                         <action selector="leftAction" destination="TwN-8z-QH6" id="h47-M7-Ijy"/>
+                                    </connections>
+                                </button>
+                                <button alignment="center" verticalAlignment="center" title="⏹" id="qbS-tk-QBT">
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                    <connections>
+                                        <action selector="spaceAction" destination="TwN-8z-QH6" id="stz-HA-2hw"/>
                                     </connections>
                                 </button>
                                 <button alignment="center" title="▶️" id="8FX-b8-TTg">
