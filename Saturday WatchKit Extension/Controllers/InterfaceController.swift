@@ -98,7 +98,7 @@ extension InterfaceController {
         
         switch MainMenu(rawValue: rowIndex) {
         case .batteryCharg:
-            NetworkManager.shared.postTest()
+            break
         
         case .soundLevel:
             guard let systemInfo = systemInfo else { return }

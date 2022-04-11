@@ -64,7 +64,16 @@ private extension MediaController {
     }
     
     func sendAction(key: MediaKey) {
-        NetworkManager.shared.postMedia(key.rawValue)
+        NetworkManager.shared.postMedia(key.rawValue) { (response, error) in
+            guard error == nil else {
+                print("[dev] \(error!)")
+                return
+            }
+            
+            guard let response = response else { return }
+            
+            print("[dev] message: \(response.message)")
+        }
     }
     
 }

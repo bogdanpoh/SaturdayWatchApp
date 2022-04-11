@@ -51,7 +51,16 @@ class SoundLevelController: WKInterfaceController {
         let intValue = Int(value)
         
         setValue(intValue)
-        NetworkManager.shared.postVolume(String(intValue))
+        NetworkManager.shared.postVolume(String(intValue)) { (response, error) in
+            guard error == nil else {
+                print("[dev] \(error!)")
+                return
+            }
+            
+            guard let response = response else { return }
+            
+            print("[dev] message: \(response.message))")
+        }
     }
     
 }

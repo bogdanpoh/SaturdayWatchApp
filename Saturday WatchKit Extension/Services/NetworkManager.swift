@@ -78,48 +78,30 @@ final class NetworkManager {
         }
     }
     
-    func postVolume(_ value: String) {
+    func postVolume(_ value: String, completion: @escaping (ServerResponse?, Error?) -> Void) {
         var endpoint = Endpoint(path: "sound", httpMethod: .post)
         endpoint.httpBody = ["volume": value]
         
         makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
-            if let error = error {
-                print("[dev] \(error)")
-            }
-            
-            guard let response = response else { return }
-            
-            print("[dev] message: \(response.message)")
+            completion(response, error)
         }
     }
     
-    func postBrightness(_ value: Int) {
+    func postBrightness(_ value: Int, completion: @escaping (ServerResponse?, Error?) -> Void) {
         var endpoint = Endpoint(path: "brightness", httpMethod: .post)
         endpoint.httpBody = ["brightness_level": value]
         
         makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
-            if let error = error {
-                print("[dev] \(error)")
-            }
-            
-            guard let response = response else { return }
-            
-            print("[dev] message: \(response.message)")
+            completion(response, error)
         }
     }
     
-    func postMedia(_ key: String) {
+    func postMedia(_ key: String, completion: @escaping (ServerResponse?, Error?) -> Void) {
         var endpoint = Endpoint(path: "media", httpMethod: .post)
         endpoint.httpBody = ["key": key]
         
         makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
-            if let error = error {
-                print("[dev] \(error)")
-            }
-            
-            guard let response = response else { return }
-            
-            print("[dev] message: \(response.message)")
+            completion(response, error)
         }
     }
     
@@ -135,23 +117,6 @@ final class NetworkManager {
             guard let response = response else { return }
             
             print("[dev] message: \(response.message)")
-        }
-    }
-    
-    func postTest() {
-        var endpoint = Endpoint(path: "", httpMethod: .post)
-        endpoint.httpBody =  [
-            "name": "Bohdan"
-        ]
-        
-        makeRequest(endpoint) { (response: String?, error: Error?) in
-            if let error = error {
-                print("[dev] \(error)")
-            }
-            
-            guard let response = response else { return }
-            
-            print("[dev] \(response)")
         }
     }
     

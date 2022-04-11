@@ -45,7 +45,16 @@ class BrightnessController: WKInterfaceController {
     @IBAction func valueChanged(_ value: Bool) {
         setValue(value: value ? 100 : 0)
         
-        NetworkManager.shared.postBrightness(value ? 1 : 0)
+        NetworkManager.shared.postBrightness(value ? 1 : 0) { (response, error) in
+            guard error == nil else {
+                print("[dev] \(error!)")
+                return
+            }
+            
+            guard let response = response else { return }
+            
+            print("[dev] message: \(response.message)")
+        }
     }
     
     // MARK: - Private
