@@ -105,18 +105,12 @@ final class NetworkManager {
         }
     }
     
-    func postShortcut(_ shortcut: String) {
+    func postShortcut(_ shortcut: String, completion: @escaping (ServerResponse?, Error?) -> Void) {
         var endpoint = Endpoint(path: "shortcut", httpMethod: .post)
         endpoint.httpBody = ["shortcut": shortcut]
         
         makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
-            if let error = error {
-                print("[dev] \(error)")
-            }
-            
-            guard let response = response else { return }
-            
-            print("[dev] message: \(response.message)")
+            completion(response, error)
         }
     }
     

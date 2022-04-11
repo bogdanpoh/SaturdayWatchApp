@@ -77,7 +77,16 @@ extension ShortcutsController {
         guard let shortcutsResponse = shortcutsResponse else { return }
         let shortcut = shortcutsResponse.shortcuts[rowIndex]
         
-        NetworkManager.shared.postShortcut(shortcut)
+        NetworkManager.shared.postShortcut(shortcut) { (response, error) in
+            guard error == nil else {
+                print("[dev] \(error!)")
+                return
+            }
+            
+            guard let response = response else { return }
+            
+            print("[dev] message: \(response.message)")
+        }
     }
     
 }
