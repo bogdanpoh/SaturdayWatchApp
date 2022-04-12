@@ -78,6 +78,19 @@ final class NetworkManager {
         }
     }
     
+    func getApplications(completion: @escaping (Result<ApplicationsResponse, Error>) -> Void) {
+        let endpoint = Endpoint(path: "applications", httpMethod: .get)
+        
+        makeRequest(endpoint) { (response: ApplicationsResponse?, error: Error?) in
+            if let error = error {
+                completion(.failure(error))
+            }
+            
+            guard let response = response else { return }
+            completion(.success(response))
+        }
+    }
+    
     func postVolume(_ value: String, completion: @escaping (ServerResponse?, Error?) -> Void) {
         var endpoint = Endpoint(path: "sound", httpMethod: .post)
         endpoint.httpBody = ["volume": value]
@@ -108,6 +121,15 @@ final class NetworkManager {
     func postShortcut(_ shortcut: String, completion: @escaping (ServerResponse?, Error?) -> Void) {
         var endpoint = Endpoint(path: "shortcut", httpMethod: .post)
         endpoint.httpBody = ["shortcut": shortcut]
+        
+        makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
+            completion(response, error)
+        }
+    }
+    
+    func postApplication(_ application: String, completion: @escaping (ServerResponse?, Error?) -> Void) {
+        var endpoint = Endpoint(path: "applications", httpMethod: .post)
+        endpoint.httpBody = ["application": application]
         
         makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
             completion(response, error)

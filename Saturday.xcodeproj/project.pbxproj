@@ -22,6 +22,9 @@
 		F725FD9727F1928200F1BD8A /* ShortcutsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725FD9627F1928200F1BD8A /* ShortcutsResponse.swift */; };
 		F73B57B127F793AD001B286C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73B57B027F793AD001B286C /* NetworkManager.swift */; };
 		F73EE3DF27F63E0E0066E7C5 /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73EE3DE27F63E0E0066E7C5 /* MediaController.swift */; };
+		F7B01E6A2804B7B2005CB4B6 /* ApplicationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E692804B7B2005CB4B6 /* ApplicationsController.swift */; };
+		F7B01E6C2804B96F005CB4B6 /* ApplicationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E6B2804B96F005CB4B6 /* ApplicationRow.swift */; };
+		F7B01E6E2804BA6B005CB4B6 /* ApplicationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E6D2804BA6B005CB4B6 /* ApplicationsResponse.swift */; };
 		F7B1A60627FF1A13006FC9E1 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1A60527FF1A13006FC9E1 /* ServerResponse.swift */; };
 		F7E793AC27F2326B00C57539 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E793AB27F2326B00C57539 /* SystemInfo.swift */; };
 		F7E793AE27F2363300C57539 /* MainRowContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E793AD27F2363300C57539 /* MainRowContoller.swift */; };
@@ -91,6 +94,9 @@
 		F725FD9627F1928200F1BD8A /* ShortcutsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsResponse.swift; sourceTree = "<group>"; };
 		F73B57B027F793AD001B286C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F73EE3DE27F63E0E0066E7C5 /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
+		F7B01E692804B7B2005CB4B6 /* ApplicationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsController.swift; sourceTree = "<group>"; };
+		F7B01E6B2804B96F005CB4B6 /* ApplicationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRow.swift; sourceTree = "<group>"; };
+		F7B01E6D2804BA6B005CB4B6 /* ApplicationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsResponse.swift; sourceTree = "<group>"; };
 		F7B1A60527FF1A13006FC9E1 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		F7E793AB27F2326B00C57539 /* SystemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
 		F7E793AD27F2363300C57539 /* MainRowContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRowContoller.swift; sourceTree = "<group>"; };
@@ -159,6 +165,7 @@
 			children = (
 				F7E793AD27F2363300C57539 /* MainRowContoller.swift */,
 				F725FD8D27F0D64200F1BD8A /* ShortcutsRowController.swift */,
+				F7B01E6B2804B96F005CB4B6 /* ApplicationRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +193,7 @@
 				F725FD9627F1928200F1BD8A /* ShortcutsResponse.swift */,
 				F7E793AB27F2326B00C57539 /* SystemInfo.swift */,
 				F7B1A60527FF1A13006FC9E1 /* ServerResponse.swift */,
+				F7B01E6D2804BA6B005CB4B6 /* ApplicationsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 				F7E793B927F3896600C57539 /* ShortcutsController.swift */,
 				F7E793BB27F3922E00C57539 /* BrightnessController.swift */,
 				F73EE3DE27F63E0E0066E7C5 /* MediaController.swift */,
+				F7B01E692804B7B2005CB4B6 /* ApplicationsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -341,12 +350,15 @@
 				F7E793AE27F2363300C57539 /* MainRowContoller.swift in Sources */,
 				F7E793BA27F3896600C57539 /* ShortcutsController.swift in Sources */,
 				F7E793B127F23B5B00C57539 /* SoundLevelController.swift in Sources */,
+				F7B01E6E2804BA6B005CB4B6 /* ApplicationsResponse.swift in Sources */,
 				F725FD9427F0DFDF00F1BD8A /* SocketError.swift in Sources */,
 				F725FD9127F0D94900F1BD8A /* SocketManager.swift in Sources */,
 				F7E793BC27F3922E00C57539 /* BrightnessController.swift in Sources */,
+				F7B01E6A2804B7B2005CB4B6 /* ApplicationsController.swift in Sources */,
 				F73B57B127F793AD001B286C /* NetworkManager.swift in Sources */,
 				F73EE3DF27F63E0E0066E7C5 /* MediaController.swift in Sources */,
 				F725FD8E27F0D64200F1BD8A /* ShortcutsRowController.swift in Sources */,
+				F7B01E6C2804B96F005CB4B6 /* ApplicationRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

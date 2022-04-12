@@ -13,6 +13,7 @@ enum MainMenu: Int, CaseIterable {
     case brightness
     case mediaControl
     case shortcuts
+    case applications
 }
 
 class InterfaceController: WKInterfaceController {
@@ -74,10 +75,13 @@ private extension InterfaceController {
                     controller.set("🖥 \(systemInfo.brightnessLevel)")
                 
                 case .mediaControl:
-                    controller.set("Media control")
+                    controller.set("🎸 Media control")
                     
                 case .shortcuts:
                     controller.set("🚹 Shourtctus")
+                
+                case .applications:
+                    controller.set("🎲 Applications")
                     
                 case .none:
                     controller.set("Undefinatted")
@@ -120,6 +124,9 @@ extension InterfaceController {
             
         case .shortcuts:
             pushController(withName: "ShortcutsController", context: nil)
+        
+        case .applications:
+            pushController(withName: "ApplicationsController", context: nil)
             
         case .none:
             break

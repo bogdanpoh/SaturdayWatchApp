@@ -9,11 +9,6 @@ import WatchKit
 
 class ShortcutsController: WKInterfaceController {
     
-    struct ShortcutsContext {
-        let title: String
-        let socketManager: SocketManagerProtocol?
-    }
-    
     // MARK: - IBOutlets
     
     @IBOutlet weak var shortcutsTable: WKInterfaceTable!

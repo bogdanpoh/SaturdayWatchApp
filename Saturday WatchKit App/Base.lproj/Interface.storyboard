@@ -93,6 +93,33 @@
             </objects>
             <point key="canvasLocation" x="-119" y="1282"/>
         </scene>
+        <!--ApplicationsController-->
+        <scene sceneID="A3I-Ub-3sE">
+            <objects>
+                <controller identifier="ApplicationsController" id="pDk-gq-VgA" customClass="ApplicationsController" customModule="Saturday_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="qgg-1A-Y2K">
+                            <items>
+                                <tableRow identifier="ApplicationRow" id="gSG-t5-66b" customClass="ApplicationRow" customModule="Saturday_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" alignment="left" id="g9J-qH-Qn6">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" id="X9L-RQ-U1h"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="X9L-RQ-U1h" id="mm2-gH-tv6"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="applicationsTable" destination="qgg-1A-Y2K" id="EUH-d3-bDT"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-119" y="1598"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="TBX-1i-FTE">
             <objects>
