@@ -189,9 +189,9 @@
 		F725FD9227F0D94D00F1BD8A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F725FD9027F0D94900F1BD8A /* SocketManager.swift */,
-				F73B57B027F793AD001B286C /* NetworkManager.swift */,
 				F7B01E71280564FD005CB4B6 /* EndPoints */,
+				F73B57B027F793AD001B286C /* NetworkManager.swift */,
+				F725FD9027F0D94900F1BD8A /* SocketManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";

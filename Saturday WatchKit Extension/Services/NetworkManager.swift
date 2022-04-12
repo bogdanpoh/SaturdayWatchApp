@@ -81,7 +81,7 @@ final class NetworkManager {
     
     // MARK: - Private
     
-    let jsonDecoder: JSONDecoder = {
+    private let jsonDecoder: JSONDecoder = {
         let jsonDecoder = JSONDecoder()
         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
         return jsonDecoder
