@@ -24,15 +24,15 @@ class ApplicationsController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
-        NetworkManager.shared.getApplications() { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print("[dev] application error \(error)")
-                
-            case .success(let response):
-                self?.applicationsResponse = response
-                self?.setupTable(applicationsResponse: response)
+        NetworkManager.shared.request(type: GetApplications()) { [weak self] (response: ApplicationsResponse?, error: Error?) in
+            guard error == nil else {
+                print("[dev] application error: \(error!)")
+                return
             }
+            
+            guard let response = response else { return }
+            self?.applicationsResponse = response
+            self?.setupTable(applicationsResponse: response)
         }
     }
     
@@ -72,7 +72,7 @@ extension ApplicationsController {
         let application = applicationsResponse.applications[rowIndex]
         
         let deleteAction = WKAlertAction(title: "Close", style: .destructive) {
-            NetworkManager.shared.postApplication(application) { [weak self] (response, error) in
+            NetworkManager.shared.request(type: PostApplication(application: application)) { [weak self] (response: ServerResponse?, error: Error?) in
                 guard error == nil else {
                     print("[dev] \(error!)")
                     return

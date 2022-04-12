@@ -7,14 +7,23 @@
 
 import Foundation
 
+protocol EndPointProtocol {
+    var path: String { get }
+    var httpMethod: NetworkManager.HttpMethod { get }
+    var httpBody: [String: Any]? { get set }
+}
+
 final class NetworkManager {
     
+    enum HttpMethod: String {
+        case get = "GET"
+        case post = "POST"
+    }
+    
     struct Endpoint {
-        enum HttpMethod: String {
-            case get = "GET"
-            case post = "POST"
-        }
-        
+        let scheme: String = "http"
+        let host: String = "192.168.0.101"
+        let port: Int = 5000
         let path: String
         let httpMethod: HttpMethod
         var queryItems: [URLQueryItem]? = nil
@@ -22,9 +31,9 @@ final class NetworkManager {
         
         var url: URL? {
             var components = URLComponents()
-            components.scheme = "http"
-            components.host = "192.168.0.101"
-            components.port = 5000
+            components.scheme = scheme
+            components.host = host
+            components.port = port
             components.path = "/" + path
             components.queryItems = queryItems
             return components.url
@@ -52,88 +61,22 @@ final class NetworkManager {
     
     private init() {}
     
-    func getSystemInfo(completion: @escaping (Result<SystemInfo, Error>) -> Void) {
-        let endpoint = Endpoint(path: "system", httpMethod: .get)
+    func request<T: Decodable>(type: EndPointProtocol, completion: @escaping (T?, _ error: Error?) -> Void) {
+        var endpoint = Endpoint(path: type.path, httpMethod: type.httpMethod)
+        endpoint.httpBody = type.httpBody
+        guard let request = endpoint.urlRequest else { return }
         
-        makeRequest(endpoint) { (response: SystemInfo?, error: Error?) in
-            if let error = error {
-                completion(.failure(error))
+        print("[dev] \(request.url?.absoluteString ?? "bad url") - \(endpoint.httpMethod.rawValue)")
+        
+        URLSession.shared.dataTask(with: request) { [weak self] (data, _, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
             }
             
-            guard let response = response else { return }
-            completion(.success(response))
-        }
-    }
-    
-    func getShortcuts(completion: @escaping (Result<ShortcutsResponse, Error>) -> Void) {
-        let endpoint = Endpoint(path: "shortcuts", httpMethod: .get)
-        
-        makeRequest(endpoint) { (response: ShortcutsResponse?, error: Error?) in
-            if let error = error {
-                completion(.failure(error))
-            }
-            
-            guard let response = response else { return }
-            completion(.success(response))
-        }
-    }
-    
-    func getApplications(completion: @escaping (Result<ApplicationsResponse, Error>) -> Void) {
-        let endpoint = Endpoint(path: "applications", httpMethod: .get)
-        
-        makeRequest(endpoint) { (response: ApplicationsResponse?, error: Error?) in
-            if let error = error {
-                completion(.failure(error))
-            }
-            
-            guard let response = response else { return }
-            completion(.success(response))
-        }
-    }
-    
-    func postVolume(_ value: String, completion: @escaping (ServerResponse?, Error?) -> Void) {
-        var endpoint = Endpoint(path: "sound", httpMethod: .post)
-        endpoint.httpBody = ["volume": value]
-        
-        makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
-            completion(response, error)
-        }
-    }
-    
-    func postBrightness(_ value: Int, completion: @escaping (ServerResponse?, Error?) -> Void) {
-        var endpoint = Endpoint(path: "brightness", httpMethod: .post)
-        endpoint.httpBody = ["brightness_level": value]
-        
-        makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
-            completion(response, error)
-        }
-    }
-    
-    func postMedia(_ key: String, completion: @escaping (ServerResponse?, Error?) -> Void) {
-        var endpoint = Endpoint(path: "media", httpMethod: .post)
-        endpoint.httpBody = ["key": key]
-        
-        makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
-            completion(response, error)
-        }
-    }
-    
-    func postShortcut(_ shortcut: String, completion: @escaping (ServerResponse?, Error?) -> Void) {
-        var endpoint = Endpoint(path: "shortcut", httpMethod: .post)
-        endpoint.httpBody = ["shortcut": shortcut]
-        
-        makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
-            completion(response, error)
-        }
-    }
-    
-    func postApplication(_ application: String, completion: @escaping (ServerResponse?, Error?) -> Void) {
-        var endpoint = Endpoint(path: "applications", httpMethod: .post)
-        endpoint.httpBody = ["application": application]
-        
-        makeRequest(endpoint) { (response: ServerResponse?, error: Error?) in
-            completion(response, error)
-        }
+            guard let data = data else { return }
+            self?.fetchData(data: data, completion: completion)
+        }.resume()
     }
     
     // MARK: - Private
@@ -149,23 +92,6 @@ final class NetworkManager {
 // MARK: - Private Methods
 
 private extension NetworkManager {
-    
-    func makeRequest<T: Decodable>(_ endpoint: Endpoint, completion: @escaping (T?, _ error: Error?) -> Void) {
-        guard let request = endpoint.urlRequest else { return }
-        
-        print("[dev] \(request.url?.absoluteString ?? "bad url") - \(endpoint.httpMethod.rawValue)")
-        
-        URLSession.shared.dataTask(with: request) { [weak self] (data, _, error) in
-            guard error == nil else {
-                completion(nil, error!)
-                return
-            }
-            
-            guard let data = data else { return }
-            
-            self?.fetchData(data: data, completion: completion)
-        }.resume()
-    }
     
     func fetchData<T: Decodable>(data: Data, completion: @escaping (T?, _ error: Error?) -> Void) {
         do {

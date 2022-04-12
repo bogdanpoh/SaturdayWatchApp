@@ -25,6 +25,14 @@
 		F7B01E6A2804B7B2005CB4B6 /* ApplicationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E692804B7B2005CB4B6 /* ApplicationsController.swift */; };
 		F7B01E6C2804B96F005CB4B6 /* ApplicationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E6B2804B96F005CB4B6 /* ApplicationRow.swift */; };
 		F7B01E6E2804BA6B005CB4B6 /* ApplicationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E6D2804BA6B005CB4B6 /* ApplicationsResponse.swift */; };
+		F7B01E7028055D9B005CB4B6 /* GetApplications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E6F28055D9B005CB4B6 /* GetApplications.swift */; };
+		F7B01E732805652B005CB4B6 /* GetShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E722805652B005CB4B6 /* GetShortcuts.swift */; };
+		F7B01E75280565F1005CB4B6 /* GetSystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E74280565F1005CB4B6 /* GetSystemInfo.swift */; };
+		F7B01E7728056790005CB4B6 /* PostVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E7628056790005CB4B6 /* PostVolume.swift */; };
+		F7B01E7928056F42005CB4B6 /* PostBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E7828056F42005CB4B6 /* PostBrightness.swift */; };
+		F7B01E7B28057075005CB4B6 /* PostMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E7A28057075005CB4B6 /* PostMedia.swift */; };
+		F7B01E7D28057154005CB4B6 /* PostShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E7C28057154005CB4B6 /* PostShortcut.swift */; };
+		F7B01E802805725A005CB4B6 /* PostApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B01E7F2805725A005CB4B6 /* PostApplication.swift */; };
 		F7B1A60627FF1A13006FC9E1 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1A60527FF1A13006FC9E1 /* ServerResponse.swift */; };
 		F7E793AC27F2326B00C57539 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E793AB27F2326B00C57539 /* SystemInfo.swift */; };
 		F7E793AE27F2363300C57539 /* MainRowContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E793AD27F2363300C57539 /* MainRowContoller.swift */; };
@@ -97,6 +105,14 @@
 		F7B01E692804B7B2005CB4B6 /* ApplicationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsController.swift; sourceTree = "<group>"; };
 		F7B01E6B2804B96F005CB4B6 /* ApplicationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRow.swift; sourceTree = "<group>"; };
 		F7B01E6D2804BA6B005CB4B6 /* ApplicationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsResponse.swift; sourceTree = "<group>"; };
+		F7B01E6F28055D9B005CB4B6 /* GetApplications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApplications.swift; sourceTree = "<group>"; };
+		F7B01E722805652B005CB4B6 /* GetShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShortcuts.swift; sourceTree = "<group>"; };
+		F7B01E74280565F1005CB4B6 /* GetSystemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSystemInfo.swift; sourceTree = "<group>"; };
+		F7B01E7628056790005CB4B6 /* PostVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVolume.swift; sourceTree = "<group>"; };
+		F7B01E7828056F42005CB4B6 /* PostBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBrightness.swift; sourceTree = "<group>"; };
+		F7B01E7A28057075005CB4B6 /* PostMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMedia.swift; sourceTree = "<group>"; };
+		F7B01E7C28057154005CB4B6 /* PostShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostShortcut.swift; sourceTree = "<group>"; };
+		F7B01E7F2805725A005CB4B6 /* PostApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApplication.swift; sourceTree = "<group>"; };
 		F7B1A60527FF1A13006FC9E1 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		F7E793AB27F2326B00C57539 /* SystemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
 		F7E793AD27F2363300C57539 /* MainRowContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRowContoller.swift; sourceTree = "<group>"; };
@@ -175,6 +191,7 @@
 			children = (
 				F725FD9027F0D94900F1BD8A /* SocketManager.swift */,
 				F73B57B027F793AD001B286C /* NetworkManager.swift */,
+				F7B01E71280564FD005CB4B6 /* EndPoints */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -196,6 +213,37 @@
 				F7B01E6D2804BA6B005CB4B6 /* ApplicationsResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F7B01E71280564FD005CB4B6 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				F7B01E7E280571DE005CB4B6 /* Shortcuts */,
+				F7B01E8128057358005CB4B6 /* Applications */,
+				F7B01E74280565F1005CB4B6 /* GetSystemInfo.swift */,
+				F7B01E7628056790005CB4B6 /* PostVolume.swift */,
+				F7B01E7828056F42005CB4B6 /* PostBrightness.swift */,
+				F7B01E7A28057075005CB4B6 /* PostMedia.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		F7B01E7E280571DE005CB4B6 /* Shortcuts */ = {
+			isa = PBXGroup;
+			children = (
+				F7B01E722805652B005CB4B6 /* GetShortcuts.swift */,
+				F7B01E7C28057154005CB4B6 /* PostShortcut.swift */,
+			);
+			path = Shortcuts;
+			sourceTree = "<group>";
+		};
+		F7B01E8128057358005CB4B6 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				F7B01E6F28055D9B005CB4B6 /* GetApplications.swift */,
+				F7B01E7F2805725A005CB4B6 /* PostApplication.swift */,
+			);
+			path = Applications;
 			sourceTree = "<group>";
 		};
 		F7E793AF27F23B3800C57539 /* Controllers */ = {
@@ -342,7 +390,12 @@
 			files = (
 				F725FD9727F1928200F1BD8A /* ShortcutsResponse.swift in Sources */,
 				F7E793AC27F2326B00C57539 /* SystemInfo.swift in Sources */,
+				F7B01E732805652B005CB4B6 /* GetShortcuts.swift in Sources */,
+				F7B01E7D28057154005CB4B6 /* PostShortcut.swift in Sources */,
+				F7B01E75280565F1005CB4B6 /* GetSystemInfo.swift in Sources */,
 				F725FD7927F0D48200F1BD8A /* NotificationController.swift in Sources */,
+				F7B01E7B28057075005CB4B6 /* PostMedia.swift in Sources */,
+				F7B01E7028055D9B005CB4B6 /* GetApplications.swift in Sources */,
 				F725FD7B27F0D48200F1BD8A /* ComplicationController.swift in Sources */,
 				F725FD7727F0D48200F1BD8A /* ExtensionDelegate.swift in Sources */,
 				F7B1A60627FF1A13006FC9E1 /* ServerResponse.swift in Sources */,
@@ -355,10 +408,13 @@
 				F725FD9127F0D94900F1BD8A /* SocketManager.swift in Sources */,
 				F7E793BC27F3922E00C57539 /* BrightnessController.swift in Sources */,
 				F7B01E6A2804B7B2005CB4B6 /* ApplicationsController.swift in Sources */,
+				F7B01E802805725A005CB4B6 /* PostApplication.swift in Sources */,
 				F73B57B127F793AD001B286C /* NetworkManager.swift in Sources */,
 				F73EE3DF27F63E0E0066E7C5 /* MediaController.swift in Sources */,
 				F725FD8E27F0D64200F1BD8A /* ShortcutsRowController.swift in Sources */,
 				F7B01E6C2804B96F005CB4B6 /* ApplicationRow.swift in Sources */,
+				F7B01E7928056F42005CB4B6 /* PostBrightness.swift in Sources */,
+				F7B01E7728056790005CB4B6 /* PostVolume.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

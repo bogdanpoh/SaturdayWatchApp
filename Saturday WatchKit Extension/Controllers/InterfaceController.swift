@@ -31,16 +31,16 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
-        NetworkManager.shared.getSystemInfo() { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print("[dev] \(error.localizedDescription)")
-                
-            case .success(let systemInfo):
-                self?.systemInfo = systemInfo
-                self?.setTitle(systemInfo.deviceName)
-                self?.setupTable(systemInfo: systemInfo)
+        NetworkManager.shared.request(type: GetSystemInfo()) { [weak self] (response: SystemInfo?, error: Error?) in
+            guard error == nil else {
+                print("[dev] system info error: \(error!)")
+                return
             }
+            
+            guard let response = response else { return }
+            self?.systemInfo = response
+            self?.setTitle(response.deviceName)
+            self?.setupTable(systemInfo: response)
         }
     }
     

@@ -24,15 +24,15 @@ class ShortcutsController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
-        NetworkManager.shared.getShortcuts() { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print("[dev] error fetch shortcuts \(error)")
-            
-            case .success(let shortcutsResponse):
-                self?.shortcutsResponse = shortcutsResponse
-                self?.setupTable(shortcutsResponse: shortcutsResponse)
+        NetworkManager.shared.request(type: GetShortcuts()) { [weak self] (response: ShortcutsResponse?, error: Error?) in
+            guard error == nil else {
+                print("[dev] shortcuts error: \(error!)")
+                return
             }
+            
+            guard let response = response else { return }
+            self?.shortcutsResponse = response
+            self?.setupTable(shortcutsResponse: response)
         }
     }
 
@@ -72,14 +72,13 @@ extension ShortcutsController {
         guard let shortcutsResponse = shortcutsResponse else { return }
         let shortcut = shortcutsResponse.shortcuts[rowIndex]
         
-        NetworkManager.shared.postShortcut(shortcut) { (response, error) in
+        NetworkManager.shared.request(type: PostShortcut(shortcut: shortcut)) { (response: ServerResponse?, error: Error?) in
             guard error == nil else {
                 print("[dev] \(error!)")
                 return
             }
             
             guard let response = response else { return }
-            
             print("[dev] message: \(response.message)")
         }
     }

@@ -49,16 +49,15 @@ class SoundLevelController: WKInterfaceController {
     
     @IBAction func changeValue(_ value: Float) {
         let intValue = Int(value)
-        
         setValue(intValue)
-        NetworkManager.shared.postVolume(String(intValue)) { (response, error) in
+        
+        NetworkManager.shared.request(type: PostVolume(value: String(intValue))) { (response: ServerResponse?, error: Error?) in
             guard error == nil else {
                 print("[dev] \(error!)")
                 return
             }
             
             guard let response = response else { return }
-            
             print("[dev] message: \(response.message))")
         }
     }

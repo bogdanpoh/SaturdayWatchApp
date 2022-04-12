@@ -42,26 +42,27 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         if complication.family == .circularSmall {
-            NetworkManager.shared.getSystemInfo() { result in
-                switch result {
-                case .failure(_):
+            NetworkManager.shared.request(type: GetSystemInfo()) { (response: SystemInfo?, error: Error?) in
+                guard error == nil else {
+                    print("[dev] Timeline Population error: \(error!)")
                     handler(nil)
-                    
-                case .success(let info):
-                    guard let batteryCharg = Float(info.batteryCharg.replacingOccurrences(of: "%", with: "")) else {
-                        print("[dev] error convert to float")
-                        return
-                    }
-                    
-                    let template = CLKComplicationTemplateCircularSmallRingText(
-                        textProvider: CLKTextProvider(format: info.batteryCharg),
-                        fillFraction: batteryCharg / 100,
-                        ringStyle: .open
-                    )
-                    
-                    let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
-                    handler(timelineEntry)
+                    return
                 }
+                guard let response = response else { return }
+                
+                guard let batteryCharg = Float(response.batteryCharg.replacingOccurrences(of: "%", with: "")) else {
+                    print("[dev] error convert to float")
+                    return
+                }
+                
+                let template = CLKComplicationTemplateCircularSmallRingText(
+                    textProvider: CLKTextProvider(format: response.batteryCharg),
+                    fillFraction: batteryCharg / 100,
+                    ringStyle: .open
+                )
+                
+                let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+                handler(timelineEntry)
             }
         } else {
             handler(nil)
