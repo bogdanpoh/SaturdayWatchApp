@@ -33,14 +33,23 @@ class InterfaceController: WKInterfaceController {
         
         NetworkManager.shared.request(type: GetSystemInfo()) { [weak self] (response: SystemInfo?, error: Error?) in
             guard error == nil else {
+                self?.setupEmptyTable()
+                
+                DispatchQueue.main.async {
+                    self?.setTitle("Saturday")
+                }
+                
                 print("[dev] system info error: \(error!)")
                 return
             }
             
             guard let response = response else { return }
             self?.systemInfo = response
-            self?.setTitle(response.deviceName)
             self?.setupTable(systemInfo: response)
+            
+            DispatchQueue.main.async {
+                self?.setTitle(response.deviceName)
+            }
         }
     }
     
@@ -87,6 +96,14 @@ private extension InterfaceController {
                     controller.set("Undefinatted")
                 }
             }
+        }
+    }
+    
+    func setupEmptyTable() {
+        mainTable.setNumberOfRows(1, withRowType: "MainRow")
+        
+        if let controller = mainTable.rowController(at: 0) as? MainRowController {
+            controller.set("🚨 Error loading data")
         }
     }
     
